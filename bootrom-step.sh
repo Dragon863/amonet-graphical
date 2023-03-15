@@ -1,7 +1,3 @@
 #!/bin/bash
-
-set -e
-
-cd modules
-python3 main.py
-cd ..
+echo "Init bootrom..."
+python3 -m amonet
