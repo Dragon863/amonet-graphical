@@ -1,0 +1,2 @@
+import amonet
+amonet.main()
