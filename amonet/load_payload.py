@@ -1,8 +1,9 @@
 import struct
 
-from amonet.common import CRYPTO_BASE
+from amonet.common import CRYPTO_BASE, Device
 
 from amonet.logger import log
+import sys
 
 
 def init(dev):
@@ -77,7 +78,7 @@ def aes_write16(dev, addr, data):
 
 def load_payload(dev, path):
     print("")
-    print(" * * * Remove the short and press Enter * * * ")
+    print(" * * * Remove the short and press the OK button * * * ")
     print("")
     input()
 
