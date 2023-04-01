@@ -1,6 +1,6 @@
 # amonet
 
-This is a modified graphical version of the amonet exploit by `xyzz` for the amazon biscuit. It will allow you to dump the internal emmc memory, and extract data from the device.
+This is a modified graphical version of the amonet exploit by `xyzz` (https://github.com/xyzz/amonet) ported to the amazon biscuit (all credit for the original exploit goes to xyzz!). This tool will allow you to dump the internal emmc memory, and extract data from the device.
 If you are compiling this yourself, before running `__init__.py` for the first time be sure to run `setup.sh` to compile binaries for the payloads.
 - Before running, peel off the rubber grip on the base of the device and use a torx 8 screwdriver to dissasemble the device and expose the main board. After this, use a flat head screwdriver or thin plastic tool to pry off the RF shield on the main processor board. 
 - You will the need a small metal piece such as a very small flat head screwdriver or a piece of tin foil to short circuit the capacitor next to the eMMC in the area shown below.
