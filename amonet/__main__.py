@@ -149,13 +149,13 @@ def main():
         input()
         sys.stdout.write("Writing contents of system_a to system.img...")
         sys.stdout.flush()
-        dump_binary(dev, "system.img", gpt["system_a"][0], gpt["system_a"][1] * 0x200)
+        dump_binary(dev, "system.img", gpt["system_a"][0], gpt["system_a"][1])
     elif part == '2':
         sys.stdout.write("Warning: this process can take a LONG time. I recommend leaving this running overnight. Press the OK button to proceed...")
         input()
         sys.stdout.write("Writing contents of userdata to userdata.img...")
         sys.stdout.flush()
-        dump_binary(dev, "userdata.img", gpt["userdata"][0], gpt["userdata"][1] * 0x200)
+        dump_binary(dev, "userdata.img", gpt["userdata"][0], gpt["userdata"][1])
     elif part == '3':
         sys.stdout.write("Which partition do you want to dump?")
         part = input(">> ")
@@ -164,7 +164,7 @@ def main():
         sys.stdout.write(f"Writing contents of {part} to {part}.img...")
         sys.stdout.flush()
         try:
-            dump_binary(dev, f"{part}.img", gpt[part][0], gpt[part][1] * 0x200)
+            dump_binary(dev, f"{part}.img", gpt[part][0], gpt[part][1])
             sys.stdout.write("Partition dump complete!")
         except Exception as e:
             sys.stdout.write("Sorry, an error occurred dumping that partition. Please check that its name is spelt correctly. Press the OK button to view error...")
